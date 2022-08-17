@@ -1,4 +1,4 @@
-## Competition review of UW-Madison GI Tract Image Segmentation
+## Competition Review of UW-Madison GI Tract Image Segmentation
 
 ![](/images/picture1.jpg "")
 
