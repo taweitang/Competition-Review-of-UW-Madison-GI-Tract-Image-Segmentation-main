@@ -33,7 +33,7 @@ We tested several sets of hyperparameters. In this section, the loss function wa
 
 
 ## Ensemble Predictions
-Setting 3 and 4 were chosen and trained with 5 folds of training data respectively. The Public Leader Board Scores were shown in the table. The best results of each fold were shown in bold, which were chosen as the models to do 5-folds ensemble predicting. Finally, the 5-folds ensemble prediction got 0.873 in Public Leader Board Score and was chosen as our final submission in the competition.
+Setting 3 and 4 were chosen and trained with 5 folds of training data respectively. The Public Leaderboard Scores were shown in the table. The best results of each fold were shown in bold, which were chosen as the models to do 5-folds ensemble predicting. Finally, the 5-folds ensemble prediction got 0.873 in Public Leaderboard Score and was chosen as our final submission in the competition.
 |Index|	Fold 0|	Fold 1|	Fold 2|	Fold 3|	Fold 4|
 |---|----|----|----|----|----|
 |3|	<strong>0.869</strong>|	0.868|	0.864|	<strong>0.867</strong>|	<strong>0.870</strong>|
