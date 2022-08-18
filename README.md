@@ -26,7 +26,7 @@ We tested several loss functions to choose the best one. In this section, the hy
 We tested several sets of hyperparameters. In this section, the loss function was Dice + CE and only fold 0 was applied. As the table shown, results of Setting 3 and 4 were better than the others.
 |Index|	Hyperparameters|Testing Score|Public LB Score|
 |-------------|-------|-------------|-------|
-|1|	epo:1000 / lr:5e-4~2e-4 / TTA = False|	0.875|	0.858|
+|1|	epo:1000 / lr:5e-4~2e-4 / TTA = False|	0.884|	0.858|
 |2|	Model 1 + epo:20 / lr:1e-4 / TTA = True|	0.882|	0.863|
 |3|	Model 2 + epo:50 / lr:1e-4~1e-5 / TTA = True|	0.887|	0.869|
 |4|	Model 3 + epo:100 / lr:1e-5~1e-6 / TTA = True|	0.890|	0.867|
