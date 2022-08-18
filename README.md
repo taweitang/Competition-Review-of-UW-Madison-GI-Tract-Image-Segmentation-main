@@ -3,7 +3,7 @@
 ![](/images/picture1.jpg "")
 
 ### About the Competition
-In [UW-Madison GI Tract Image Segmentation competition](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/overview), contestants should create a model to automatically segment the stomach and intestines on MRI scans. The competition is evaluated on the mean Dice coefficient and 3D Hausdorff distance.
+In [UW-Madison GI Tract Image Segmentation competition](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/overview), contestants should create a model to automatically segment the stomach and intestines on MRI scans. The competition is evaluated on the mean [Dice coefficient](https://www.kaggle.com/code/yerramvarun/understanding-dice-coefficient) and 3D [Hausdorff distance](https://en.wikipedia.org/wiki/Hausdorff_distance).
 
 ### Our Result
 We won the bronze medal in the competition with the [Private LB score 0.86783, ranking 142/1548 (Top 9.17%).](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/leaderboard)
@@ -30,6 +30,8 @@ We tested several sets of hyperparameters. In this section, the loss function wa
 |2|	Model 1 + epo:20 / lr:1e-4 / TTA = True|	0.882|	0.863|
 |3|	Model 2 + epo:50 / lr:1e-4~1e-5 / TTA = True|	0.887|	0.869|
 |4|	Model 3 + epo:100 / lr:1e-5~1e-6 / TTA = True|	0.890|	0.867|
+
+Note: TTA = [Test Time Augmentation](https://medium.com/analytics-vidhya/test-time-augmentation-using-pytorch-3da02d0a3188)
 
 
 ## Ensemble Predictions
