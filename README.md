@@ -14,7 +14,7 @@ To achieve better detection effect and make the model converge effectively, we u
 
 ## Loss Function
 We tested several loss functions to choose the best one. In this section, the hyperparameters were as follow: Epoch: 1000 / Learning Rate: 5e-4~2e-4 and only fold 0 was applied. As the table shown, Dice + CE was chosen as the best loss function in our solution.
-|     Loss Function        | Dice + Hausdorff |
+|     Loss Function        | Testing Score |
 |-------------|-------|
 |Dice| 0.865|
 |CE|0.866|
@@ -24,7 +24,7 @@ We tested several loss functions to choose the best one. In this section, the hy
 
 ## Hyperparameters
 We tested several sets of hyperparameters. In this section, the loss function was Dice + CE and only fold 0 was applied. As the table shown, results of Setting 3 and 4 were better than the others.
-|Index|	Hyperparameters|Dice + Hausdorff|Public LB Score|
+|Index|	Hyperparameters|Testing Score|Public LB Score|
 |-------------|-------|-------------|-------|
 |1|	epo:1000 / lr:5e-4~2e-4 / TTA = False|	0.875|	0.858|
 |2|	Model 1 + epo:20 / lr:1e-4 / TTA = True|	0.882|	0.863|
