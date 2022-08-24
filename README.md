@@ -10,7 +10,7 @@ We won the bronze medal in the competition with the [Private LB score 0.86783, r
 
 ## Solution Pipelines
 ![](/images/picture2.png "")
-To achieve better detection effect and make the model converge effectively, we used the following training and validating processes: First, divides the source files into five folders. Second, trained 5 3D U-NET with patch size is (192, 192, 80) models (based on [MONAI pipeline](https://www.kaggle.com/datasets/yiheng/uw3dmonaitrainingpipeline)) with each sub datasets. Finally, during validating process, input the data into five models respectively, and then conduct 5-folds ensemble predictions.
+To achieve better detection performance, we used the following training and validating processes: First, divides the source files into five folds of training sets and testing sets. Second, trained 5 3D U-NET with patch size is (192, 192, 80) models (based on [MONAI pipeline](https://www.kaggle.com/datasets/yiheng/uw3dmonaitrainingpipeline)) with each sub datasets. Finally, during validating process, input the data into five models respectively, and then conduct 5-folds ensemble predictions.
 
 ## Loss Function
 We tested several loss functions to choose the best one. In this section, the hyperparameters were as follow: Epoch: 1000 / Learning Rate: 5e-4~2e-4 and only fold 0 was applied. As the table shown, Dice + CE was chosen as the best loss function in our solution.
