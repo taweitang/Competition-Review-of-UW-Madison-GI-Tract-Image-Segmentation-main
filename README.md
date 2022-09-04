@@ -10,11 +10,11 @@ We won the bronze medal in the competition with the [Private LB score 0.86783, r
 
 ## Solution Pipelines
 ![](/images/picture2.png "")
-To achieve better detection performance, we used the following training and validating processes: First, divides the source files into five folds of training sets and testing sets. Second, trained 5 3D U-NET with patch size is (192, 192, 80) models (based on [MONAI pipeline](https://www.kaggle.com/datasets/yiheng/uw3dmonaitrainingpipeline)) with each sub datasets. Finally, during validating process, input the data into five models respectively, and then conduct 5-folds ensemble predictions.
+To achieve better detection performance, we used the following training and testing processes: First, divides the source files into five folds of training sets and validation sets. Second, trained 5 3D U-NET with patch size is (192, 192, 80) models (based on [MONAI pipeline](https://www.kaggle.com/datasets/yiheng/uw3dmonaitrainingpipeline)) with each sub datasets. Finally, during testing process, input the data into five models respectively, and then conduct 5-folds ensemble predictions.
 
 ## Loss Function
 We tested several loss functions to choose the best one. In this section, the hyperparameters were as follow: Epoch: 1000 / Learning Rate: 5e-4~2e-4 and only fold 0 was applied. As the table shown, Dice + CE was chosen as the best loss function in our solution.
-|     Loss Function        | Testing Score |
+|     Loss Function        | Validation Score |
 |-------------|-------|
 |Dice| 0.865|
 |CE|0.866|
@@ -24,7 +24,7 @@ We tested several loss functions to choose the best one. In this section, the hy
 
 ## Hyperparameters
 We tested several sets of hyperparameters. In this section, the loss function was Dice + CE and only fold 0 was applied. As the table shown, results of Setting 3 and 4 were better than the others.
-|Index|	Hyperparameters|Testing Score|Public LB Score|
+|Index|	Hyperparameters|Validation Score|Public LB Score|
 |-------------|-------|-------------|-------|
 |1|	epo:1000 / lr:5e-4~2e-4 / TTA = False|	0.884|	0.858|
 |2|	Model 1 + epo:20 / lr:1e-4 / TTA = True|	0.882|	0.863|
