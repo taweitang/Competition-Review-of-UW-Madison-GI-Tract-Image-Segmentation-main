@@ -9,7 +9,7 @@ In [UW-Madison GI Tract Image Segmentation competition](https://www.kaggle.com/c
 We won the bronze medal in the competition with the [Private LB score 0.86783, ranking 142/1548 (Top 9.17%).](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/leaderboard)
 
 ## Solution Pipelines
-![](/images/picture2.png "")
+![](/images/picture2_2.png "")
 To achieve better detection performance, we used the following training and testing processes: First, divides the source files into five folds of training sets and validation sets. Second, trained 5 3D U-NET with patch size is (192, 192, 80) models (based on [MONAI pipeline](https://www.kaggle.com/datasets/yiheng/uw3dmonaitrainingpipeline)) with each sub datasets. Finally, during testing process, input the data into five models respectively, and then conduct 5-folds ensemble predictions.
 
 ## Loss Function
